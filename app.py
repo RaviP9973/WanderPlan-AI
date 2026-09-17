@@ -14,6 +14,7 @@ from backend import run_travel_agent, resume_travel_agent
 # agent functions to call async MCP helpers inside FastAPI.
 import nest_asyncio
 
+# allows multiple event loops to run in the same thread, which is necessary for FastAPI
 nest_asyncio.apply()
 
 BASE_DIR = Path(__file__).resolve().parent
